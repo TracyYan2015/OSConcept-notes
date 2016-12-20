@@ -1,0 +1,28 @@
+Process Synchronization Notes
+
+Peterson’s Algorithm
+	1. Restricted to solve exclusive problem between two processes. 
+	2. Algorithm:
+		do{
+			flag[i] = true;
+			turn = j;
+			while(flag[i] == true && turn == j)
+				; // do nothing
+			{ critical section }
+			{ remainder section }
+		
+		}	while (true);
+	3. It satisfies three requirement: a. mutual exclusion b. progress c. bounded waiting. (freedom from starvation)
+
+Semaphore
+	1. an integer variable which can only be accessed by 2 operations: signal() and wait()
+	wait(S)
+	{
+		while S <= 0:
+			; // do nothing
+		S--;
+	}
+
+	signal(S){
+		S++;
+	}
