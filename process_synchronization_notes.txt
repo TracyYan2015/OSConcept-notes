@@ -26,3 +26,11 @@ Semaphore
 	signal(S){
 		S++;
 	}
+
+Readers-Writers Problem
+	First readers-writers problem: 
+		a variation of the general readers-writers problem. It states that, the only situation for a reader process to be waiting is that there's one writer process is writing. (As long as no writing is occuring, any reader process can read from shared data.)
+
+		
+
+
